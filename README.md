@@ -1,8 +1,12 @@
-## Traffic Sign Classifier (Self-Driving Car Engineer Nanodegree)
+## Building a Traffic Sign Recognition Classifier (Self-Driving Car Engineer Nanodegree)
 
-This repository contains code, source and resuling images and videos
-with lane lines detected. The code is in Jupyter notebook
-[`Traffic_Sign_Classifier.ipynb`](./Traffic_Sign_Classifier.ipynb). Please, follow
+This repository contains the code in a form of a Jupyter notebook that could be
+used in trafic signs classification task. The preprocessed data is also presented
+in this repository in [`traffic-signs-data`](./traffic-signs-data). The data
+contains German traffic sign images of 42 kinds 
+([description](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset)).
+The model of convolutional neural network that performs classification
+can be found in [`Traffic_Sign_Classifier.ipynb`](./Traffic_Sign_Classifier.ipynb). Please, follow
 the instructions below to prepare an environment to run this notebook.
 There is also [`Writeup.md`](./Writeup.md) where the pros and cons of the implementation described.
 
