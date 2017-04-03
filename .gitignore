@@ -1,4 +1,4 @@
 .floydexpt
 .floydignore
 floyd_requirements.txt
-
+.ipynb_checkpoints/

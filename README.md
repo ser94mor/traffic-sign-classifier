@@ -11,6 +11,10 @@ the instructions below to prepare an environment to run this notebook.
 There is also [`Writeup.md`](./Writeup.md) where the pros and cons of the implementation described.
 
 #### Preparing Environment
+In order to be able to use traffic sign data in this repository, Git Large File Storage extension 
+should be installed on the system. Installation instructions can be found on 
+[git-lfs.github.com](https://git-lfs.github.com).
+
 In order to provide all the dependencies to the code in Jupyter notebook,
 build a docker image with the following command:
 ```bash
