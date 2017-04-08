@@ -1,15 +1,15 @@
-#**Traffic Sign Recognition** 
+# **Traffic Sign Recognition** 
 
-##Writeup Template
+## Writeup
 
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
+### Author: Sergey Morozov
 
 ---
 
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
-* Load the data set (see below for links to the project data set)
+* Load the data set (included into this repository in [traffic-sign-data](./traffic-sign-data) directory)
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
@@ -19,48 +19,41 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./traffic-sign-images/11-Right-of-way-at-the-next-intersection.jpg "Right of way at the next intersection"
+[image2]: ./traffic-sign-images/12-Priority-road.jpg "Priority road"
+[image3]: ./traffic-sign-images/14-Stop.jpg "Stop"
+[image4]: ./traffic-sign-images/15-No-vehicles.jpg "No vehicles"
+[image5]: ./traffic-sign-images/1-Speed-limit-30-km-h.jpg "Speed limit 30 km/h"
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) 
+individually and describe how I addressed each point in my implementation.
 
----
-###Writeup / README
+The project code can be found in [Traffic_Sign_Classifier.ipynb](./Traffic_Sign_Classifier.ipynb).
+The execution results can be found in [Traffic_Sign_Classifier.html](./Traffic_Sign_Classifier.html).
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+### Dataset Exploration
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+#### Dataset Summary
 
-###Data Set Summary & Exploration
+The basic statistics such as images shapes, number of traffic sign categories, 
+number of samples in training, validation and test image sets is presented in the 
+*Step 1: Dataset Summary & Exploration* section, *A Basic Summary of the Dataset* subsection. 
 
-####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### Exploratory Visualization
 
-The code for this step is contained in the second code cell of the IPython notebook.  
+In section *Step 1: Dataset Summary & Exploration*, *An Exploratory Visualization of the Dataset* subsection
+you will find example images from each category.
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+There is also a colorful histogram representing
+number of samples of each category in the training set. As we can see some categories have
+a lot of samples (maximum: 2010) and some categories have fewer number of samples (minimum: 180).
+We will "equalize" number of samples in each category in the later sections.
 
-* The size of training set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+### Design and Test a Model Architecture
 
-####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
+#### Preprocessing
 
-The code for this step is contained in the third code cell of the IPython notebook.  
-
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
-
-![alt text][image1]
-
-###Design and Test a Model Architecture
 
 ####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 

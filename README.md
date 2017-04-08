@@ -2,7 +2,7 @@
 
 This repository contains the code in a form of a Jupyter notebook that could be
 used in trafic signs classification task. The preprocessed data is also presented
-in this repository in [`traffic-signs-data`](./traffic-signs-data). The data
+in this repository in [`traffic-sign-data`](./traffic-sign-data). The data
 contains German traffic sign images of 43 kinds 
 ([description](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset)).
 The model of convolutional neural network that performs classification
