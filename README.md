@@ -15,14 +15,9 @@ In order to be able to use traffic sign data in this repository, Git Large File 
 should be installed on the system. Installation instructions can be found on 
 [git-lfs.github.com](https://git-lfs.github.com).
 
-In order to provide all the dependencies to the code in Jupyter notebook,
-build a docker image with the following command:
+To run Jupyter notebook, start a docker container with:
 ```bash
-docker build --tag udacity/carnd-term1-starter-kit:patched --file Dockerfile .
-```
-Then start a docker container with:
-```bash
-docker run --interactive --tty --rm --publish 8888:8888 --volume $PWD:/src udacity/carnd-term1-starter-kit:patched
+docker run --interactive --tty --rm --publish 8888:8888 --volume $PWD:/src udacity/carnd-term1-starter-kit:latest
 ```
 Note, that the current directory will become your working directory in Jupyter notebook.
 
@@ -31,6 +26,6 @@ the source code. The link will be similar but not equal to
 `http://localhost:8888/?token=eb26e4a2b935c384dc3e0230a8181984f07da6be9df0c1b8`.
 
 #### Notice
-Dockerfile and some functions from [`Traffic_Sign_Classifier.ipynb`](./Traffic_Sign_Classifier.ipynb) are
+Some functions from [`Traffic_Sign_Classifier.ipynb`](./Traffic_Sign_Classifier.ipynb) are
 provided by [Udacity.com](https://www.udacity.com).
 
