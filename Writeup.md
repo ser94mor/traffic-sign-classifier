@@ -24,6 +24,9 @@ The goals / steps of this project are the following:
 [image3]: ./traffic-sign-images/14-Stop.jpg "Stop"
 [image4]: ./traffic-sign-images/15-No-vehicles.jpg "No vehicles"
 [image5]: ./traffic-sign-images/1-Speed-limit-30-km-h.jpg "Speed limit 30 km/h"
+[image6]: ./writeup-images/before.png
+[image7]: ./writeup-images/normalization.png
+[image8]: ./writeup-images/grayscale.png
 
 ## Rubric Points
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) 
@@ -54,6 +57,23 @@ We will "equalize" number of samples in each category in the later sections.
 
 #### Preprocessing
 
+Image preprocessing can be found in *Step 2: Design and Test a Model Architecture* section, 
+*Pre-process the Data Set (normalization, grayscale, etc.)* subsection.
+
+There are some transformations required to be performed on each image in order to feed it to neural network.
+1. Normalize RGB image. This is done to make each image "look similar" to each other, to make input consistent.
+2. Convert RGB image to gray scale. It was observed that neural network performs slightly better on the gray scale images.
+It also may be wrong observations.
+
+I was also tried to use adaptive historam equalization for improving the local contrast and 
+enhancing the definitions of edges in each region of an image but it decreased the performance of the
+network, so only normalization and gray scale conversion were used in the final run.
+
+Below are original image, image after normalization and gray scale image.
+
+![alt text][image6] ![alt text][image7] ![alt text][image8]
+
+#### Model Architecture
 
 ####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
